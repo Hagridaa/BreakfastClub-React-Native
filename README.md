@@ -1,3 +1,4 @@
 # BreakfastClub-React-Native
 
-#app mafe with React-Native. The app is breakfast Club app- where user can buy reakfast.
+#app made with React-Native. The app is breakfast Club app- where user can buy breakfast.
+#UI layout made with Sketch
