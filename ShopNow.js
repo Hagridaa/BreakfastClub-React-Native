@@ -8,18 +8,23 @@ export default function App () {
     return (
 
         <View style={styles.container}>
+
             <Text style={styles.H1}>
                 BREAKFAST CLUB
             </Text>
-
             <Text style={styles.H2}>
                 Shop now
             </Text>
 
+            <Image style={styles.cart} source = {require('./CART1.png')}/>
 
-            <View style={styles.container4}>
-                <Image source = {require('./CART1.png')}/>
-            </View>
+                <View style={styles.search}>
+                <Image source = {require('./search.png')}/>
+                <Text>Mood for something special?</Text>
+                </View>
+
+
+
 
         </View>
 
@@ -96,12 +101,15 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
     },
 
-    container4: {
-        flex: 1,
-        flexDirection: "column",
-        paddingLeft: 320,
-
-
+    cart: {
+      marginLeft: 310
     },
+
+    search: {
+       marginLeft: 20,
+        marginTop: 10,
+        flexDirection: 'row'
+    },
+
 });
 
