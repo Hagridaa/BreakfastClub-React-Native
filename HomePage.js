@@ -19,7 +19,7 @@ export default function App () {
                     <Image source = {require('./Group5.png')}/>
                 </View>*/}
 
-                <Button onPress={() => Alert.alert('Button pressed')} title={"ENTER CLUB"} color={"pink"} />
+                {/*<Button onPress={() => Alert.alert('Button pressed')} title={"ENTER CLUB"} color={"pink"} />*/}
 
             </ImageBackground>
 
