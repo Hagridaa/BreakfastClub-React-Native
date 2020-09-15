@@ -1,5 +1,5 @@
 import React from "react";
-import { ImageBackground, StyleSheet, Text, View, Image, Button, Alert} from "react-native";
+import {ImageBackground, StyleSheet, Text, View, Image, Button, Alert, ScrollView} from "react-native";
 
 
 
@@ -8,20 +8,18 @@ export default function App () {
     return (
 
         <View style={styles.container}>
-            <ImageBackground source={require('./sean-geraghty-JjxaZVoAAuA-unsplash.jpg')} style={styles.image}>
-                <Text style={styles.text}>BREAKFAST CLUB</Text>
-                <Text style={styles.text2}>Buy yourself a good morning</Text>
+            <Text style={styles.H1}>
+                BREAKFAST CLUB
+            </Text>
 
-                <View style={styles.container2}>
-                    <Image source = {require('./Group.png')}/>
-                </View>
-                {/*<View style={styles.container3}>
-                    <Image source = {require('./Group5.png')}/>
-                </View>*/}
+            <Text style={styles.H2}>
+                Shop now
+            </Text>
 
-                <Button onPress={() => Alert.alert('Button pressed')} title={"ENTER CLUB"} color={"pink"} />
 
-            </ImageBackground>
+            <View style={styles.container4}>
+                <Image source = {require('./CART1.png')}/>
+            </View>
 
         </View>
 
@@ -80,5 +78,30 @@ const styles = StyleSheet.create({
       backgroundColor: "white"
 
     }*/
+
+    H1: {
+        color: '#352E58',
+        fontSize: 24,
+        fontWeight: "bold",
+        marginLeft: 10,
+        marginBottom: 10,
+        marginTop: 40
+    },
+
+    H2: {
+        fontSize: 18,
+        color: '#CA7D09',
+        marginLeft: 10,
+        marginBottom: 10,
+        fontWeight: "bold",
+    },
+
+    container4: {
+        flex: 1,
+        flexDirection: "column",
+        paddingLeft: 320,
+      
+
+    },
 });
 
