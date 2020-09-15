@@ -6,7 +6,7 @@ import {ImageBackground, StyleSheet, Text, View, Image, Button, Alert, ScrollVie
 export default function App () {
 
     return (
-
+        <ScrollView style={styles.scrollView}>
         <View style={styles.container}>
 
             <Text style={styles.H1}>
@@ -23,11 +23,11 @@ export default function App () {
                 <Text>Mood for something special?</Text>
                 </View>
 
-
+            <Image style={styles.imageShop} source = {require('./shopimage.png')}/>
 
 
         </View>
-
+        </ScrollView>
 
     )};
 
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
         color: '#352E58',
         fontSize: 24,
         fontWeight: "bold",
-        marginLeft: 10,
+        marginLeft: 20,
         marginBottom: 10,
         marginTop: 40
     },
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     H2: {
         fontSize: 18,
         color: '#CA7D09',
-        marginLeft: 10,
+        marginLeft: 20,
         marginBottom: 10,
         fontWeight: "bold",
     },
@@ -110,6 +110,18 @@ const styles = StyleSheet.create({
         marginTop: 10,
         flexDirection: 'row'
     },
+
+    scrollView: {
+        marginHorizontal: 0,
+        marginTop: 10,
+        marginBottom: 5
+
+    },
+
+    imageShop: {
+        marginLeft: 30,
+        marginTop: 20
+    }
 
 });
 
