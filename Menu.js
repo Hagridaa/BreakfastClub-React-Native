@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         marginLeft: 10,
         marginBottom: 10,
-        marginTop: 10
+        marginTop: 40
     },
     text: {
         color: 'black',

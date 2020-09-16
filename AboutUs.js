@@ -9,7 +9,7 @@ export default function App() {
 
             <ScrollView style={styles.scrollView}>
                 <Text style={styles.H1}>
-                    Welcome to Breakfast Club!
+                    WELCOME TO BREAKFAST CLUB
                 </Text>
 
                 <Text style={styles.H2}>
@@ -45,7 +45,7 @@ export default function App() {
 
                 <View>
                 <Text style={styles.hungry}>
-                    Get Hungry Gallery
+                    SWIPE Hungry Gallery
                 </Text>
 
                 <ScrollView horizontal={true} style={styles.scrollView2}>
@@ -56,6 +56,11 @@ export default function App() {
                         <Image  source = {require('./brooke-lark-HlNcigvUi4Q-unsplash.jpg')}/>
                     </View>
                 </ScrollView>
+                </View>
+
+                <View>
+                    <Text style={styles.hungry}>Contact Us</Text>
+                    <Text>Send us message here</Text>
                 </View>
 
 
@@ -158,7 +163,7 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: "bold",
         marginLeft: 10,
-        marginBottom: 10,
+        marginBottom: 20,
         marginTop: 40
     },
 
