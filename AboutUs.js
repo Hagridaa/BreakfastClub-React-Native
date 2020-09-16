@@ -45,7 +45,7 @@ export default function App() {
 
                 <View>
                 <Text style={styles.hungry}>
-                    Get hungry
+                    Get Hungry Gallery
                 </Text>
 
                 <ScrollView horizontal={true} style={styles.scrollView2}>
@@ -125,12 +125,12 @@ const styles = StyleSheet.create({
     },
 
     hungry: {
-        fontSize: 18,
+        fontSize: 16,
         color: '#CA7D09',
         marginLeft: 10,
         marginBottom: 2,
         fontWeight: "bold",
-        marginTop: 10
+        marginTop: 30
 
     },
 
