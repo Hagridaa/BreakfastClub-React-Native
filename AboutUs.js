@@ -39,6 +39,35 @@ export default function App() {
                     esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
                     in culpa qui officia deserunt mollit anim id.
                 </Text>
+                <View>
+                    <Image  source = {require('./brooke-lark-HlNcigvUi4Q-unsplash.jpg')}/>
+                </View>
+
+                <View>
+                <Text style={styles.hungry}>
+                    Get hungry
+                </Text>
+
+                <ScrollView horizontal={true} style={styles.scrollView2}>
+                    <View style={styles.imageScroll}>
+                        <Image source = {require('./brooke-lark-HlNcigvUi4Q-unsplash.jpg')}/>
+                        <Text>IIII</Text>
+                        <Image  source = {require('./brooke-lark-HlNcigvUi4Q-unsplash.jpg')}/>
+                        <Image  source = {require('./brooke-lark-HlNcigvUi4Q-unsplash.jpg')}/>
+                    </View>
+                </ScrollView>
+                </View>
+
+
+                <Text style={styles.adress}>
+                    55 Breakfast street
+                </Text>
+                <Text style={styles.adress}>
+                    London UK
+                </Text>
+                <Text style={styles.adress}>
+                    550100
+                </Text>
 
             </ScrollView>
 
@@ -59,15 +88,32 @@ const styles = StyleSheet.create({
         marginBottom: 5
 
     },
+
+    scrollView2: {
+    marginTop: 5,
+        marginBottom: 10,
+
+
+
+    },
     text: {
         fontSize: 18,
         // color: '#CA7D09',
         color: 'black',
         fontWeight: "bold",
         marginTop: 400,
-        marginBottom: 30,
+        marginBottom: 10,
         marginLeft: 10,
         marginRight: 10
+    },
+
+    adress: {
+
+        textAlign: 'center',
+        fontSize: 18,
+        color: '#CA7D09',
+        marginBottom: 10,
+        fontWeight: "bold",
     },
 
     H2: {
@@ -78,16 +124,33 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
     },
 
+    hungry: {
+        fontSize: 18,
+        color: '#CA7D09',
+        marginLeft: 10,
+        marginBottom: 2,
+        fontWeight: "bold",
+        marginTop: 10
+
+    },
+
     image2: {
         paddingRight: 10,
         width: 40,
-        height: 40
+        height: 40,
+
     },
 
     image3: {
         paddingRight: 10,
         width: 60,
         height: 70
+    },
+
+    imageScroll: {
+        flex: 1,
+        flexDirection: 'row',
+
     },
 
     H1: {
@@ -97,7 +160,8 @@ const styles = StyleSheet.create({
         marginLeft: 10,
         marginBottom: 10,
         marginTop: 40
-    }
+    },
+
 });
 
 
