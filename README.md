@@ -7,5 +7,7 @@ UI layout made with Sketch.
 - ViewPager
 - Font
 - Localization
+- LinearGradient
 
 ## AWS-database
+
