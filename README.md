@@ -5,3 +5,4 @@ UI layout made with Sketch.
 
 ## Expo SDK
 - ViewPager
+- Font
