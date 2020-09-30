@@ -1,11 +1,25 @@
-import React from "react";
-import {ImageBackground, StyleSheet, Text, View, Image, Button, Alert, ScrollView} from "react-native";
+import React, { useState } from "react";
+
+import {ImageBackground,
+    StyleSheet,
+    Text,
+    View,
+    Image,
+    Button,
+    Alert,
+    ScrollView,
+    TextInput,
+    TouchableOpacity
+} from "react-native";
 import ViewPager from "@react-native-community/viewpager";
 
 
 export default function App () {
+    const [count, setCount] = useState(0);
+    const onPress = () => setCount(prevCount => prevCount + 1);
 
     return (
+
         <ScrollView style={styles.scrollView}>
         <View style={styles.container}>
 
@@ -16,15 +30,44 @@ export default function App () {
                 Shop now
             </Text>
 
-            <Image style={styles.cart} source = {require('./CART1.png')}/>
+            <Image style={styles.cart} source = {require('./CART12png.png')}/>
+            <View style={styles.countContainer}>
+                <Text style={styles.cart}>Items on cart: {count}</Text>
+            </View>
 
                 <View style={styles.search}>
                 <Image source = {require('./search.png')}/>
-                <Text>Mood for something special?</Text>
+                    <TextInput placeholder={' Mood for something special?'}/>
                 </View>
 
-            {/*<Image style={styles.imageShop} source = {require('./shopimage.png')}/>*/}
-            <ViewPager style={styles.viewPager} initialPage={0}>
+            <View style={styles.shopfood}>
+            <Image style={styles.imageShop} source = {require('./brooke-lark-HlNcigvUi4Q-unsplash.jpg')}/>
+            <Text>Brunchset 1</Text>
+                <Text>Price: 10e</Text>
+                <Text>Includes 2 waffles, two coffees</Text>
+
+                <TouchableOpacity
+                    style={styles.button}
+                    onPress={onPress}>
+                    <Image style={styles.plusbutton} source = {require('./plusbutton.png')}/>
+                </TouchableOpacity>
+            </View>
+            <View style={styles.shopfood}>
+                <Image style={styles.imageShop} source = {require('./brooke-lark-HlNcigvUi4Q-unsplash.jpg')}/>
+                <Text>Brunchset 2</Text>
+                <Text>Includes 2 waffles, two coffees</Text>
+                <Image style={styles.plusbutton} source = {require('./plusbutton.png')}/>
+            </View>
+            <View style={styles.shopfood}>
+                <Image style={styles.imageShop} source = {require('./brooke-lark-HlNcigvUi4Q-unsplash.jpg')}/>
+                <Text>Brunchset 3</Text>
+                <Text>Includes 2 waffles, two coffees</Text>
+                <Image style={styles.plusbutton} source = {require('./plusbutton.png')}/>
+            </View>
+
+
+
+            {/*<ViewPager style={styles.viewPager} initialPage={0}>
                 <View style={styles.page} key="1">
                     <Text>First page</Text>
                     <Text>Swipe ➡️</Text>
@@ -35,7 +78,7 @@ export default function App () {
                 <View style={styles.page} key="3">
                     <Text>Third page</Text>
                 </View>
-            </ViewPager>
+            </ViewPager>*/}
 
 
         </View>
@@ -133,9 +176,16 @@ const styles = StyleSheet.create({
     },
 
     imageShop: {
-        marginLeft: 30,
-        marginTop: 20
+        height: 200,
+        width: 200,
+        marginTop: 20,
+
     },
+    shopfood: {
+    marginLeft: 100
+
+    },
+
     viewPager: {
         flex:1
     },
@@ -143,6 +193,10 @@ const styles = StyleSheet.create({
     page: {
         justifyContent: 'center',
         alignItems: 'center'
+    },
+    plusbutton: {
+        marginLeft: 70,
+        marginBottom: 20
     }
 
 });
