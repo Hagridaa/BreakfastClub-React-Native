@@ -7,6 +7,7 @@ import AboutUs from "./AboutUs";
 import {createStackNavigator} from "@react-navigation/stack"
 import ShopNow from "./ShopNow";
 import Menu from "./Menu";
+import Recipes from "./RecipeIdeas"
 
 const Tab = createBottomTabNavigator();
 
@@ -23,6 +24,7 @@ export default function App() {
             <Tab.Screen name="ABOUT US" component={AboutUs} />
             <Tab.Screen name="SHOP NOW" component={ShopNow} />
             <Tab.Screen name="MENU" component={Menu}/>
+            <Tab.Screen name="RECIPEBOOK" component={Recipes}/>
 
         </Tab.Navigator>
       </NavigationContainer>

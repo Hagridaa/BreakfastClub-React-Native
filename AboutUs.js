@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, SafeAreaView, ScrollView, ImageBackground, Image, View} from 'react-native';
+import {StyleSheet, Text, SafeAreaView, ScrollView, ImageBackground, Image, View, TextInput, Button} from 'react-native';
 import Constants from 'expo-constants';
 
 export default function App() {
@@ -58,12 +58,23 @@ export default function App() {
                 </ScrollView>
                 </View>
 
-                <View>
+                <View style={styles.contact}>
                     <Text style={styles.hungry}>Contact Us</Text>
                     <Text>Send us message here</Text>
+                    <TextInput
+                        placeholder={' Write message here'}
+                    style={styles.input}
+                    />
+                     <TextInput placeholder={' Write your email here'}
+                      style={styles.input}
+                     />
                 </View>
-
-
+                <View style={styles.buttonStyle}>
+                          <Button color="black" title="Message us"/>
+                        </View>
+                <Text style={styles.adress}>
+                    Breakfast Club
+                </Text>
                 <Text style={styles.adress}>
                     55 Breakfast street
                 </Text>
@@ -97,8 +108,6 @@ const styles = StyleSheet.create({
     scrollView2: {
     marginTop: 5,
         marginBottom: 10,
-
-
 
     },
     text: {
@@ -166,6 +175,26 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         marginTop: 40
     },
+    input: {
+        borderColor: 'black',
+        borderBottomColor:'black',
+        width:300,
+        height:40,
+        borderWidth: 2,
+        marginTop: 20
+    },
+
+    contact: {
+        alignItems: 'center',
+        marginBottom: 20
+    },
+
+    buttonStyle: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        marginBottom: 40
+    },
+
 
 });
 

@@ -1,6 +1,6 @@
 import React from "react";
 import {ImageBackground, StyleSheet, Text, View, Image, Button, Alert, ScrollView} from "react-native";
-
+import ViewPager from "@react-native-community/viewpager";
 
 
 export default function App () {
@@ -23,11 +23,25 @@ export default function App () {
                 <Text>Mood for something special?</Text>
                 </View>
 
-            <Image style={styles.imageShop} source = {require('./shopimage.png')}/>
+            {/*<Image style={styles.imageShop} source = {require('./shopimage.png')}/>*/}
+            <ViewPager style={styles.viewPager} initialPage={0}>
+                <View style={styles.page} key="1">
+                    <Text>First page</Text>
+                    <Text>Swipe ➡️</Text>
+                </View>
+                <View style={styles.page} key="2">
+                    <Text>Second page</Text>
+                </View>
+                <View style={styles.page} key="3">
+                    <Text>Third page</Text>
+                </View>
+            </ViewPager>
 
 
         </View>
+
         </ScrollView>
+
 
     )};
 
@@ -121,6 +135,14 @@ const styles = StyleSheet.create({
     imageShop: {
         marginLeft: 30,
         marginTop: 20
+    },
+    viewPager: {
+        flex:1
+    },
+
+    page: {
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 
 });
