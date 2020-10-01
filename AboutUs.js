@@ -73,6 +73,7 @@ export default function App() {
                 <View style={styles.buttonStyle}>
                           <Button color="black" title="Send Message"/>
                         </View>
+                <View style={styles.find}>
                 <Text style={styles.findus}>Find us</Text>
                 <Image style={styles.locationImage} source = {require('./location2.png')}/>
                 <Text style={styles.adress}>
@@ -87,6 +88,7 @@ export default function App() {
                 <Text style={styles.adress}>
                     550100
                 </Text>
+                    </View>
 
             </ScrollView>
 
@@ -195,7 +197,7 @@ const styles = StyleSheet.create({
     buttonStyle: {
         flexDirection: 'row',
         justifyContent: 'center',
-        marginBottom: 40
+        marginBottom: 80
     },
     contactImage: {
         marginLeft: 10,
@@ -204,7 +206,7 @@ const styles = StyleSheet.create({
     },
     locationImage: {
         marginLeft: 185,
-        marginBottom:5
+        marginBottom:20
     },
 
     findus: {
@@ -212,7 +214,11 @@ const styles = StyleSheet.create({
         color: '#CA7D09',
         fontWeight: "bold",
         marginLeft: 185,
-        marginBottom: 5
+        marginBottom: 5 ,
+        marginTop: 20
+    } ,
+    find: {
+        backgroundColor: '#FFF5F5'
     }
 
 

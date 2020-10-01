@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
 
     text2: {
         color: '#CA7D09',
-        fontSize: 12,
+        fontSize: 14,
         fontWeight: "bold",
         marginLeft: 100,
         fontFamily: 'Poppins'
