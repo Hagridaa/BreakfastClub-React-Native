@@ -17,6 +17,7 @@ import ViewPager from "@react-native-community/viewpager";
 export default function App () {
     const [count, setCount] = useState(0);
     const onPress = () => setCount(prevCount => prevCount + 1);
+    const onPress2 = () => setCount(prevCount => prevCount - 1);
 
     return (
 
@@ -42,7 +43,7 @@ export default function App () {
 
             <View style={styles.shopfood}>
             <Image style={styles.imageShop} source = {require('./brooke-lark-HlNcigvUi4Q-unsplash.jpg')}/>
-            <Text>Brunchset 1</Text>
+            <Text style={styles.text3}>Brunchset 1</Text>
                 <Text>Price: 10e</Text>
                 <Text>Includes 2 waffles, two coffees</Text>
 
@@ -51,7 +52,15 @@ export default function App () {
                     onPress={onPress}>
                     <View style={styles.buttonarea}>
                     <Image style={styles.plusbutton} source = {require('./plusbutton.png')}/>
-                    <Image style={styles.minusbutton} source = {require('./minusbutton.png')}/>
+                    <Text style={styles.add}>Add to cart</Text>
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    style={styles.button}
+                    onPress={onPress2}>
+                    <View style={styles.buttonarea}>
+                        <Image style={styles.minusbutton} source = {require('./minusbutton.png')}/>
+                        <Text style={styles.add}>Delete from cart</Text>
                     </View>
                 </TouchableOpacity>
             </View>
@@ -199,16 +208,28 @@ const styles = StyleSheet.create({
     },
     plusbutton: {
         marginLeft: 30,
-        marginBottom: 20
+        marginBottom: 0
     },
     minusbutton: {
-        marginLeft: 10,
+        marginLeft: 30,
         marginBottom: 20
     },
 
     buttonarea: {
         flexDirection: 'row'
-    }
+    },
+
+    add: {
+        marginTop: 25,
+        color: '#CA7D09'
+    },
+    text3: {
+        color: '#CA7D09',
+        fontSize: 16,
+        fontWeight: "bold",
+        marginLeft: 0,
+
+    },
 
 });
 
