@@ -207,11 +207,11 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     plusbutton: {
-        marginLeft: 30,
+        marginLeft: 0,
         marginBottom: 0
     },
     minusbutton: {
-        marginLeft: 30,
+        marginLeft: 0,
         marginBottom: 20
     },
 

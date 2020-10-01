@@ -60,6 +60,7 @@ export default function App() {
 
                 <View style={styles.contact}>
                     <Text style={styles.hungry}>Contact Us</Text>
+                    <Image style={styles.contactImage} source = {require('./contact2.png')}/>
                     <Text>Send us message here</Text>
                     <TextInput
                         placeholder={' Write message here'}
@@ -194,6 +195,11 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         marginBottom: 40
     },
+    contactImage: {
+        marginLeft: 10,
+        marginTop: 5,
+        marginBottom: 5
+    }
 
 
 });
