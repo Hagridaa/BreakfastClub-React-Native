@@ -49,7 +49,10 @@ export default function App () {
                 <TouchableOpacity
                     style={styles.button}
                     onPress={onPress}>
+                    <View style={styles.buttonarea}>
                     <Image style={styles.plusbutton} source = {require('./plusbutton.png')}/>
+                    <Image style={styles.minusbutton} source = {require('./minusbutton.png')}/>
+                    </View>
                 </TouchableOpacity>
             </View>
             <View style={styles.shopfood}>
@@ -195,8 +198,16 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     plusbutton: {
-        marginLeft: 70,
+        marginLeft: 30,
         marginBottom: 20
+    },
+    minusbutton: {
+        marginLeft: 10,
+        marginBottom: 20
+    },
+
+    buttonarea: {
+        flexDirection: 'row'
     }
 
 });
