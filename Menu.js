@@ -15,7 +15,7 @@ const DATA = [
     },
     {
         title: "Brunch",
-        data: ["Vegan surprice 20e", "English gift 20e", "Everything 30e"]
+        data: ["Vegan surprice 20e" , "English gift 20e", "Everything 30e"]
     },
     {
         title: "Drinks",

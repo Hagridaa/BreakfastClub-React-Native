@@ -12,6 +12,7 @@ import {ImageBackground,
     TouchableOpacity
 } from "react-native";
 import ViewPager from "@react-native-community/viewpager";
+import {LinearGradient} from "expo-linear-gradient";
 
 
 export default function App () {
@@ -22,6 +23,7 @@ export default function App () {
     return (
 
         <ScrollView style={styles.scrollView}>
+            <LinearGradient colors={['#F8EAEA', 'white']}>
         <View style={styles.container}>
 
             <Text style={styles.H1}>
@@ -94,7 +96,7 @@ export default function App () {
 
 
         </View>
-
+        </LinearGradient>
         </ScrollView>
 
 

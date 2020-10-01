@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, SafeAreaView, ScrollView, ImageBackground, Image, View, TextInput, Button} from 'react-native';
 import Constants from 'expo-constants';
 
+
 export default function App() {
     return (
         <SafeAreaView style={styles.container}>
@@ -76,6 +77,7 @@ export default function App() {
                 <View style={styles.find}>
                 <Text style={styles.findus}>Find us</Text>
                 <Image style={styles.locationImage} source = {require('./location2.png')}/>
+
                 <Text style={styles.adress}>
                     Breakfast Club
                 </Text>
@@ -218,7 +220,8 @@ const styles = StyleSheet.create({
         marginTop: 20
     } ,
     find: {
-        backgroundColor: '#FFF5F5'
+        backgroundColor: '#FFF5F5',
+       
     }
 
 
