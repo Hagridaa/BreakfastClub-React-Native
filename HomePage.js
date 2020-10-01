@@ -1,32 +1,37 @@
 import React from "react";
 import { ImageBackground, StyleSheet, Text, View, Image, Button, Alert} from "react-native";
+import {useFonts} from "expo-font";
+import {AppLoading} from "expo";
 
 
 
 export default function App () {
 
-    return (
+        return (
 
-        <View style={styles.container}>
-            <ImageBackground source={require('./sean-geraghty-JjxaZVoAAuA-unsplash.jpg')} style={styles.image}>
-                <Text style={styles.text}>BREAKFAST CLUB</Text>
-                <Text style={styles.text2}>Buy yourself a good morning</Text>
+            <View style={styles.container}>
+                <ImageBackground source={require('./sean-geraghty-JjxaZVoAAuA-unsplash.jpg')} style={styles.image}>
+                    <Text style={styles.text}>BREAKFAST CLUB</Text>
+                    <Text style={styles.text2}>Buy yourself a good morning</Text>
 
-                <View style={styles.container2}>
-                    <Image source = {require('./Group.png')}/>
-                </View>
-                {/*<View style={styles.container3}>
+                    <View style={styles.container2}>
+                        <Image source = {require('./Group.png')}/>
+                    </View>
+                    {/*<View style={styles.container3}>
                     <Image source = {require('./Group5.png')}/>
                 </View>*/}
 
-                {/*<Button onPress={() => Alert.alert('Button pressed')} title={"ENTER CLUB"} color={"pink"} />*/}
+                    {/*<Button onPress={() => Alert.alert('Button pressed')} title={"ENTER CLUB"} color={"pink"} />*/}
 
-            </ImageBackground>
+                </ImageBackground>
 
-        </View>
+            </View>
 
 
-    )};
+        )
+
+
+    };
 
 const styles = StyleSheet.create({
 
@@ -70,6 +75,8 @@ const styles = StyleSheet.create({
         fontSize: 12,
         fontWeight: "bold",
         marginLeft: 100,
+        fontFamily: 'Poppins'
+
 
     },
     /*style={styles.button}
