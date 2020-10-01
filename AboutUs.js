@@ -71,8 +71,10 @@ export default function App() {
                      />
                 </View>
                 <View style={styles.buttonStyle}>
-                          <Button color="black" title="Message us"/>
+                          <Button color="black" title="Send Message"/>
                         </View>
+                <Text style={styles.findus}>Find us</Text>
+                <Image style={styles.locationImage} source = {require('./location2.png')}/>
                 <Text style={styles.adress}>
                     Breakfast Club
                 </Text>
@@ -125,7 +127,7 @@ const styles = StyleSheet.create({
     adress: {
 
         textAlign: 'center',
-        fontSize: 18,
+        fontSize: 17,
         color: '#CA7D09',
         marginBottom: 10,
         fontWeight: "bold",
@@ -140,7 +142,7 @@ const styles = StyleSheet.create({
     },
 
     hungry: {
-        fontSize: 16,
+        fontSize: 18,
         color: '#CA7D09',
         marginLeft: 10,
         marginBottom: 2,
@@ -198,6 +200,18 @@ const styles = StyleSheet.create({
     contactImage: {
         marginLeft: 10,
         marginTop: 5,
+        marginBottom: 5
+    },
+    locationImage: {
+        marginLeft: 185,
+        marginBottom:5
+    },
+
+    findus: {
+           fontSize: 18,
+        color: '#CA7D09',
+        fontWeight: "bold",
+        marginLeft: 185,
         marginBottom: 5
     }
 
