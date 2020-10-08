@@ -16,6 +16,13 @@ UI layout made with Sketch.
 ![icon](plusbutton.png)
 ![icon](search.png)
 
+## React Native Elements
+- Avatar
+- Tile
+
+## Navigation
+- React-navigation/bottom-tabs
+
 ## Expo SDK
 - ViewPager
 - Font
