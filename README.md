@@ -25,6 +25,8 @@ UI layout made with Sketch.
 ## AWS-database
 
 ## How to run
-- install everything package.json
+- clone project
+- npm install -g expo-cli
+- npm install
 - expo start
 
