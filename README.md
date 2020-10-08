@@ -4,8 +4,8 @@ School project. App made with React-Native. The app is Breakfast Club app, where
 UI layout made with Sketch.
 
 
-<img src="mainpageui.png" alt="drawing" width="200" height="400"/>
-<img src="main2.jpg" alt="drawing" width="200" height="400"/>
+<img src="mainpageui.png" alt="drawing" width="200" height="400"/><img src="main2.jpg" alt="drawing" width="200" height="400"/>
+
 
 ## Icons made with Sketch:
 
