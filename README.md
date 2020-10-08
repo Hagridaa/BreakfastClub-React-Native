@@ -3,6 +3,8 @@
 School project. App made with React-Native. The app is Breakfast Club app, where user can buy breakfast.
 UI layout made with Sketch.
 
+![mainpage](Näyttökuva%202020-10-8%20kello%2017.24.57.png)
+
 ## Icons made with Sketch:
 
 ![icon](contact2.png)
@@ -11,6 +13,7 @@ UI layout made with Sketch.
 ![icon](location2.png)
 ![icon](minusbutton.png)
 ![icon](plusbutton.png)
+![icon](search.png)
 
 ## Expo SDK
 - ViewPager
