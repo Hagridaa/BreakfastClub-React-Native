@@ -3,7 +3,7 @@
 School project. App made with React-Native. The app is Breakfast Club app, where user can buy breakfast.
 UI layout made with Sketch.
 
-##Icons made with Sketch:
+## Icons made with Sketch:
 
 ![icon](contact2.png)
 ![icon](CART12png.png)
