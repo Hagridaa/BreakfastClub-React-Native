@@ -5,6 +5,7 @@ UI layout made with Sketch.
 
 
 <img src="mainpageui.png" alt="drawing" width="200" height="400"/>
+<img src="main2.jpg" alt="drawing" width="200" height="400"/>
 
 ## Icons made with Sketch:
 

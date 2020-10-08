@@ -11,7 +11,7 @@ import Recipes from "./RecipeIdeas"
 import { AppLoading } from 'expo';
 import { useFonts } from 'expo-font';
 import * as Font from "expo-font";
-
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
 
@@ -48,7 +48,33 @@ export default function App() {
     else {
         return (
             <NavigationContainer>
-                <Tab.Navigator tabBarOptions={{
+                <Tab.Navigator
+                    screenOptions={({ route }) => ({
+                        tabBarIcon: ({ focused, color, size }) => {
+                            let iconName;
+
+                            if (route.name === 'ABOUT US') {
+                                iconName = focused
+                                    ? 'ios-information-circle'
+                                    : 'ios-information-circle-outline';
+                            } else if (route.name === 'MENU') {
+                                iconName = 'ios-list-box';
+                            }
+                            else if (route.name === 'HOME') {
+                                iconName = 'ios-home';
+                            }
+                            else if (route.name === 'SHOP NOW') {
+                                iconName = 'ios-star';
+                            }
+                            else if (route.name === 'RECIPEBOOK') {
+                                iconName = 'ios-book';
+                            }
+
+                            // You can return any component that you like here!
+                            return <Ionicons name={iconName} size={size} color={color} />;
+                        },
+                    })}
+                    tabBarOptions={{
                     activeTintColor: 'white',
                     activeBackgroundColor: 'black',
                     inactiveTintColor: '#CA7D09',

@@ -44,7 +44,7 @@ export default function App() {
                     <Image  source = {require('./brooke-lark-HlNcigvUi4Q-unsplash.jpg')}/>
                 </View>
 
-                <View>
+
                 <Text style={styles.hungry}>
                     SWIPE Hungry Gallery
                 </Text>
@@ -56,9 +56,9 @@ export default function App() {
                         <Image  source = {require('./brooke-lark-HlNcigvUi4Q-unsplash.jpg')}/>
                         <Image  source = {require('./brooke-lark-HlNcigvUi4Q-unsplash.jpg')}/>
                     </View>
-                    </View>
+
                 </ScrollView>
-                </View>
+
 
                 <View style={styles.contact}>
                     <Text style={styles.hungry}>Contact Us</Text>
@@ -73,25 +73,25 @@ export default function App() {
                      />
                 </View>
                 <View style={styles.buttonStyle}>
-                          <Button color="black" title="Send Message"/>
-                        </View>
+                    <Button color="black" title="Send Message"/>
+                </View>
                 <View style={styles.find}>
-                <Text style={styles.findus}>Find us</Text>
-                <Image style={styles.locationImage} source = {require('./location2.png')}/>
+                    <Text style={styles.findus}>Find us</Text>
+                    <Image style={styles.locationImage} source = {require('./location2.png')}/>
 
-                <Text style={styles.adress}>
-                    Breakfast Club
-                </Text>
-                <Text style={styles.adress}>
-                    55 Breakfast street
-                </Text>
-                <Text style={styles.adress}>
-                    London UK
-                </Text>
-                <Text style={styles.adress}>
-                    550100
-                </Text>
-                    </View>
+                    <Text style={styles.adress}>
+                        Breakfast Club
+                    </Text>
+                    <Text style={styles.adress}>
+                        55 Breakfast street
+                    </Text>
+                    <Text style={styles.adress}>
+                        London UK
+                    </Text>
+                    <Text style={styles.adress}>
+                        550100
+                    </Text>
+                </View>
 
             </ScrollView>
 
