@@ -56,6 +56,7 @@ export default function App() {
                         <Image  source = {require('./brooke-lark-HlNcigvUi4Q-unsplash.jpg')}/>
                         <Image  source = {require('./brooke-lark-HlNcigvUi4Q-unsplash.jpg')}/>
                     </View>
+                    </View>
                 </ScrollView>
                 </View>
 
