@@ -27,7 +27,8 @@ UI layout made with Sketch.
 ## Expo SDK
 - ViewPager
 - Font
-- LinearGradient
+- LinearGradien
+- Splash Screen
 
 ## AWS-database
 
