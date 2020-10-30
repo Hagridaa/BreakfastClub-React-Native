@@ -1,17 +1,63 @@
-import React from 'react';
-import {StyleSheet, Text, SafeAreaView, ScrollView, ImageBackground, Image, View, TextInput, Button} from 'react-native';
+import React, {useState} from 'react';
+import {
+    StyleSheet,
+    Text,
+    SafeAreaView,
+    ScrollView,
+    ImageBackground,
+    Image,
+    View,
+    TextInput,
+    Button,
+    Alert
+} from 'react-native';
+import  {Avatar} from "react-native-elements";
 import Constants from 'expo-constants';
+import { API } from 'aws-amplify';
+import { Tile} from "react-native-elements";
 
 
 export default function App() {
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+
+    const sendMessage = () => {
+        const apiName = 'contactapi'; // replace this with your api name.
+        const path = '/contact'; //replace this with the path you have configured on your API
+        const myInit = {
+            body: {
+                message: message,
+                email: email,
+            }, // replace this with attributes you need
+            headers: {}, // OPTIONAL
+        };
+        API.post(apiName, path, myInit)
+            .then(response => {
+                console.log(response)
+                return Alert.alert(response.success)
+            })
+            .catch(error => {
+                console.log(error.response);
+            });
+        setMessage('')
+        setEmail('')
+    }
+
     return (
+
         <SafeAreaView style={styles.container}>
 
-
             <ScrollView style={styles.scrollView}>
+
                 <Text style={styles.H1}>
                     WELCOME TO BREAKFAST CLUB
                 </Text>
+                <Tile
+                    imageSrc={require('./amy-flak-MK4TYh3CxKs-unsplash.jpg')}
+                    title="Enjoy healthy food with us"
+                    featured
+                    caption="Pancakes, porridges..you name it"
+                />
 
                 <Text style={styles.H2}>
                     About us
@@ -66,19 +112,34 @@ export default function App() {
                     <Text>Send us message here</Text>
                     <TextInput
                         placeholder={' Write message here'}
-                    style={styles.input}
+                        value={message}
+                        onChangeText={setMessage}
+                        style={styles.input}
                     />
                      <TextInput placeholder={' Write your email here'}
                       style={styles.input}
+                      value={email}
+                      onChangeText={setEmail}
                      />
                 </View>
                 <View style={styles.buttonStyle}>
-                    <Button color="black" title="Send Message"/>
+                    <Button color="black" title="Send Message" onPress={() => sendMessage()}/>
                 </View>
                 <View style={styles.find}>
                     <Text style={styles.findus}>Find us</Text>
                     <Image style={styles.locationImage} source = {require('./location2.png')}/>
-
+                    <Avatar
+                        rounded
+                        size="large"
+                        containerStyle={{flex: 2, marginLeft: 175, marginTop: 10, marginBottom:10}}
+                        source={{
+                            uri:
+                                'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+                        }}
+                    />
+                    <Text style={styles.ceo}>
+                        CEO Nia Q: 040 000 111
+                    </Text>
                     <Text style={styles.adress}>
                         Breakfast Club
                     </Text>
@@ -91,6 +152,8 @@ export default function App() {
                     <Text style={styles.adress}>
                         550100
                     </Text>
+
+
                 </View>
 
             </ScrollView>
@@ -138,11 +201,21 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
     },
 
+    ceo: {
+
+        textAlign: 'center',
+        fontSize: 17,
+        color: 'black',
+        marginBottom: 20,
+        fontWeight: "bold",
+    },
+
     H2: {
         fontSize: 18,
         color: '#CA7D09',
         marginLeft: 10,
         marginBottom: 10,
+        marginTop: 20,
         fontWeight: "bold",
     },
 

@@ -12,13 +12,15 @@ import { AppLoading } from 'expo';
 import { useFonts } from 'expo-font';
 import * as Font from "expo-font";
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import Amplify from 'aws-amplify'
+import config from './aws-exports'
 
-
-
+Amplify.configure(config)
 
 const Tab = createBottomTabNavigator();
 
 export default function App() {
+
     const [fontReady, setFontReady] = useState(false)
     // let [fontsLoaded] = useFonts({
     //     'Poppins': require('./assets/Fonts/Poppins/Poppins-Regular.ttf'),
