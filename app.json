@@ -6,9 +6,9 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./brooke-lark-nBtmglfY0HU-unsplash.jpg",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#CA7D09"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
