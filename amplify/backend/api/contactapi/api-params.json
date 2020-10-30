@@ -1,0 +1,45 @@
+{
+    "paths": [
+        {
+            "name": "/contact",
+            "lambdaFunction": "contactlambda",
+            "privacy": {
+                "protected": true,
+                "auth": [
+                    "/POST",
+                    "/GET",
+                    "/PUT",
+                    "/PATCH",
+                    "/DELETE"
+                ],
+                "unauth": [
+                    "/POST"
+                ]
+            },
+            "policyResourceName": "/contact"
+        }
+    ],
+    "resourceName": "contactapi",
+    "apiName": "contactapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "contactlambda"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 1,
+        "authRoleName": "amplify-mobileproject-dev-200257-authRole",
+        "unAuthRoleName": "amplify-mobileproject-dev-200257-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "contactlambda",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
