@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import {
     StyleSheet,
     Text,
@@ -7,25 +7,8 @@ import {
     SectionList
 } from "react-native";
 import Constants from "expo-constants";
+import { API } from 'aws-amplify';
 
-const DATA = [
-    {
-        title: "Porridge",
-        data: ["Waffle syrup 3,5e","Cinnamon 2,5e", "Toffee 3e"]
-    },
-    {
-        title: "Brunch",
-        data: ["Vegan surprice 20e" , "English gift 20e", "Everything 30e"]
-    },
-    {
-        title: "Drinks",
-        data: ["Latte 5e", "Kombutcha 3e", "Black coffee 2e"]
-    },
-    {
-        title: "Desserts",
-        data: ["Cheese Cake 4,5e", "Waffle dream 5e", "Raw bites 2e"]
-    }
-];
 
 const Item = ({ title }) => (
     <View style={styles.item}>
@@ -34,6 +17,20 @@ const Item = ({ title }) => (
 );
 
 export  default function App() {
+    const [menu, setMenu] = useState([])
+    useEffect(() => {
+        fetchMenuFromApi()
+    }, [])
+    const fetchMenuFromApi = async () => {
+        const apiName = 'menuapi';
+        const path = '/menu';
+        const myInit = { // OPTIONAL
+            headers: {}, // OPTIONAL
+        };
+
+        const response = await API.get(apiName, path, myInit)
+        setMenu(response.data.Items)
+    }
 
     return(
     <SafeAreaView style={styles.container}>
@@ -41,7 +38,7 @@ export  default function App() {
         <Text style={styles.H2}>MENU</Text>
         <Text style={styles.text}>Every order includes daily changing surprise</Text>
         <SectionList
-            sections={DATA}
+            sections={menu}
             keyExtractor={(item, index) => item + index}
             renderItem={({ item }) => <Item title={item} />}
             renderSectionHeader={({ section: { title } }) => (
