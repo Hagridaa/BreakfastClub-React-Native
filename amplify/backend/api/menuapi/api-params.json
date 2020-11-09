@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/menu",
+            "lambdaFunction": "menulambda",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/menu"
+        }
+    ],
+    "resourceName": "menuapi",
+    "apiName": "menuapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "menulambda"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-mobileproject-dev-200257-authRole",
+        "unAuthRoleName": "amplify-mobileproject-dev-200257-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "menulambda",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

@@ -5,6 +5,12 @@
       "providerPlugin": "awscloudformation",
       "service": "Lambda",
       "dependsOn": []
+    },
+    "menulambda": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": []
     }
   },
   "auth": {
@@ -28,10 +34,28 @@
           ]
         }
       ]
+    },
+    "menuapi": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "menulambda",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ]
     }
   },
   "storage": {
     "contactdb": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation"
+    },
+    "menudb": {
       "service": "DynamoDB",
       "providerPlugin": "awscloudformation"
     }
