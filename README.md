@@ -38,3 +38,28 @@ UI layout made with Sketch.
 - npm install
 - expo start
 
+### Example how to put data to dynamodb table:
+````shell script
+aws dynamodb put-item \
+      --table-name menu-dev \
+      --item file://menu1.json
+````
+
+### Example how to get data from dynamodb table:
+
+#### 1.
+      
+````shell script
+aws dynamodb get-item \
+   --table-name menu-dev \
+   --key '{ "title": {"S": "Desserts"}}'
+````
+ 
+ #### 2.
+   
+```shell script
+aws dynamodb query \
+ --table-name menu-dev \
+ --key-condition-expression "title = :name" \
+ --expression-attribute-values '{":name":{"S":"Desserts"}}'
+```         
