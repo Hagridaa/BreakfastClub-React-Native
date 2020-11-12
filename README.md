@@ -1,6 +1,6 @@
 # BreakfastClub-React-Native
 
-School project. App made with React-Native. The app is Breakfast Club app, where user can buy breakfast.
+School project. App made with React-Native. The app is Breakfast Club app, where user can buy breakfast, send messages to Breakfast Club and view menu.
 UI layout made with Sketch.
 
 
