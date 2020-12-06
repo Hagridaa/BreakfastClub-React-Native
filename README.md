@@ -30,7 +30,12 @@ UI layout made with Sketch.
 - LinearGradien
 - Splash Screen
 
-## AWS-database
+## AWS
+- aws amplify (used to create all aws infrastructure)
+- aws cli (tool to use aws from commandline)
+- aws database = DynamoDB no sql database
+- aws api gateway (rest api endpoints)
+- Lambdas (functions responds to api calls, connects to DynamoDB, returns response to mobile client)
 
 ## How to run
 - clone project
