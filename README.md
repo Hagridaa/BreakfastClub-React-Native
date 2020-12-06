@@ -1,6 +1,6 @@
 # BreakfastClub-React-Native
 
-School project. App made with React-Native. The app is Breakfast Club app, where user can buy breakfast.
+School project. App made with React-Native. The app is Breakfast Club app, where user can buy breakfast, send messages to Breakfast Club and view menu.
 UI layout made with Sketch.
 
 
@@ -30,7 +30,12 @@ UI layout made with Sketch.
 - LinearGradien
 - Splash Screen
 
-## AWS-database
+## AWS
+- aws amplify (used to create all aws infrastructure)
+- aws cli (tool to use aws from commandline)
+- aws database = DynamoDB no sql database
+- aws api gateway (rest api endpoints)
+- Lambdas (functions responds to api calls, connects to DynamoDB, returns response to mobile client)
 
 ## How to run
 - clone project
