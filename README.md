@@ -37,13 +37,57 @@ UI layout made with Sketch.
 - aws api gateway (rest api endpoints)
 - Lambdas (functions responds to api calls, connects to DynamoDB, returns response to mobile client)
 
-## How to run
-- clone project
-- npm install -g expo-cli
-- npm install
-- expo start
+## Prerequisites
 
-### Example how to put data to dynamodb table:
+* Node.js v10 or later
+* npm v5 or later
+* git
+* Amplify CLI
+* Expo CLI
+* AWS account
+
+### 1 - Sign up for an AWS account
+
+If you don't already have an AWS account, you need to create one.
+
+[Create aws account](https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fportal.aws.amazon.com%2Fbilling%2Fsignup%2Fresume&client_id=signup#/start)
+
+### 2 - Install and configure Amplify CLI
+
+To deploy AWS resources we need Amplify Command Line Interface (CLI)
+```shell script
+npm install -g @aws-amplify/cli
+```
+
+After installing the CLI configure it by running:
+
+```shell script
+amplify configure
+```
+
+``amplify configure`` will sign in to the AWS Console. 
+Once signed in, Amplify CLI will ask you to create an IAM user and goes through some steps.
+
+To see more detailed instructions see [Amplify Prerequisites](https://docs.amplify.aws/start/getting-started/installation/q/integration/react-native#option-2-follow-the-instructions)
+
+###  3 - Install Expo CLI
+
+Expo CLI is needed to run the application. Installed it by typing the following command.
+````shell script
+npm install -g expo-cli
+````
+
+### 4 - Clone and setup the project from github by using Amplify CLI
+Pass the GitHub URL for the BreakfastClub-React-Native app in the amplify init command as shown below:
+```shell script
+amplify init --app https://github.com/Hagridaa/BreakfastClub-React-Native
+```
+
+The init command clones the GitHub repository, initializes he CLI, creates a 'sampledev' environment in CLI,
+detects and categories, provisions the backend, pushes the changes to the cloud, and starts the app.
+
+
+### Examples how to put data to dynamodb table:
 ````shell script
 aws dynamodb put-item \
       --table-name menu-dev \
